@@ -14,12 +14,11 @@ import type {
 	IGetDecisionBulkResponse,
 	IResourceDecision,
 } from './types';
+import { HEALTH_CHECK_TIMEOUT } from '../clients/virtru/VirtruClient';
 import type { VirtruClient } from '../clients/virtru/VirtruClient';
 import { buildEntityIdentifier, buildAttributeFqns, getUserEntityKey } from '../clients/virtru/identity';
 
 const pdpLogger = logger.section('VirtruPDP');
-
-const HEALTH_CHECK_TIMEOUT = 5000;
 
 export class VirtruPDP implements IPolicyDecisionPoint {
 	private client: VirtruClient;
