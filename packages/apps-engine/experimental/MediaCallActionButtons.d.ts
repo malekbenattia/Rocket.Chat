@@ -1,10 +1,14 @@
 import type { MediaCallState } from '../definition/ui/IUIActionButtonDescriptor';
-import type { IUIKitResponse, UIKitInteractionType } from '../definition/uikit/IUIKitInteractionType';
+import type { IUIKitResponse } from '../definition/uikit/IUIKitInteractionType';
 import type { IUIKitActionButtonIncomingInteraction } from '../definition/uikit/UIKitIncomingInteractionTypes';
-import '../definition/uikit/UIKitInteractionResponder';
-import '../definition/ui/IUIActionButtonDescriptor';
-import '../definition/uikit/UIKitInteractionContext';
 import type { IUIKitActionButtonMediaCallWidgetIncomingInteraction } from '../definition/uikit/UIKitInteractionContext';
+import '../definition/ui/IUIActionButtonDescriptor';
+import '../definition/uikit/UIKitInteractionResponder';
+import '../definition/uikit/UIKitInteractionContext';
+
+export declare function isMediaCallWidgetIncomingInteraction(
+	interaction: IUIKitActionButtonIncomingInteraction,
+): interaction is IUIKitActionButtonMediaCallWidgetIncomingInteraction;
 
 declare module '@rocket.chat/apps-engine/definition/uikit/UIKitInteractionResponder' {
 	/**
@@ -21,7 +25,7 @@ declare module '@rocket.chat/apps-engine/definition/uikit/UIKitInteractionRespon
 	};
 
 	export interface IUIKitActionButtonUpdateResponse extends IUIKitResponse {
-		type: `${UIKitInteractionType.ACTION_BUTTON_UPDATE}`;
+		type: 'action_button.update';
 		/** New action ID to replace the one that triggered the interaction. */
 		actionId?: string;
 		/** New i18n key for the button label. */
@@ -55,13 +59,6 @@ declare module '@rocket.chat/apps-engine/definition/ui/IUIActionButtonDescriptor
 	interface IUIActionButtonDescriptorMap {
 		mediaCallWidgetAction: MediaCallWidgetActionButtonDescriptor;
 	}
-}
-
-export function isMediaCallWidgetIncomingInteraction(
-	interaction: IUIKitActionButtonIncomingInteraction,
-): interaction is IUIKitActionButtonMediaCallWidgetIncomingInteraction {
-	// eslint-disable-next-line @typescript-eslint/no-unsafe-enum-comparison -- valid for experimental feature
-	return interaction.buttonContext === 'mediaCallWidgetAction';
 }
 
 declare module '@rocket.chat/apps-engine/definition/uikit/UIKitInteractionContext' {
