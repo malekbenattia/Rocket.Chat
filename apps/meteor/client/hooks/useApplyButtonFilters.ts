@@ -1,4 +1,4 @@
-import type { IUIActionButton } from '@rocket.chat/apps-engine/definition/ui';
+import type { IUIActionButton, RoomActionButton } from '@rocket.chat/apps-engine/definition/ui';
 import { RoomTypeFilter } from '@rocket.chat/apps-engine/definition/ui';
 import type { IRoom } from '@rocket.chat/core-typings';
 import {
@@ -27,9 +27,10 @@ const enumToFilter: { [k in RoomTypeFilter]: (room: IRoom) => boolean } = {
 	[RoomTypeFilter.LIVE_CHAT]: isOmnichannelRoom,
 };
 
-const applyRoomFilter = (button: IUIActionButton, room: IRoom): boolean => {
-	const { roomTypes } = button.when || {};
-	return !roomTypes || roomTypes.some((filter): boolean => enumToFilter[filter]?.(room));
+export const applyRoomFilter = (button: IUIActionButton, room: IRoom): boolean => {
+	const { roomTypes } = (button.when as RoomActionButton['when']) || {};
+
+	return !roomTypes || roomTypes.some((filter): boolean => !!enumToFilter[filter]?.(room));
 };
 
 const applyCategoryFilter = (button: IUIActionButton, category: string): boolean => {
@@ -55,7 +56,7 @@ export const useApplyButtonFilters = (category = 'default'): ((button: IUIAction
 	);
 };
 
-export const useApplyButtonAuthFilter = (): ((button: IUIActionButton) => boolean) => {
+export const useApplyButtonAuthFilter = (): ((button: IUIActionButton, room?: IRoom) => boolean) => {
 	const uid = useUserId();
 
 	const { queryAllPermissions, queryAtLeastOnePermission, queryRole } = useContext(AuthorizationContext);

@@ -1,4 +1,4 @@
-import type { IUIActionButton, UIActionButtonContext } from '@rocket.chat/apps-engine/definition/ui';
+import type { IUIActionButton, UIActionButtonAvailableContexts } from '@rocket.chat/apps-engine/definition/ui';
 import { useDebouncedCallback } from '@rocket.chat/fuselage-hooks';
 import { useConnectionStatus, useEndpoint, useStream, useUserId } from '@rocket.chat/ui-contexts';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 
 export const getIdForActionButton = ({ appId, actionId }: IUIActionButton): string => `${appId}/${actionId}`;
 
-export const useAppActionButtons = <TContext extends `${UIActionButtonContext}`>(context?: TContext) => {
+export const useAppActionButtons = (context?: UIActionButtonAvailableContexts) => {
 	const queryClient = useQueryClient();
 	const apps = useStream('apps');
 	const uid = useUserId();
@@ -25,7 +25,7 @@ export const useAppActionButtons = <TContext extends `${UIActionButtonContext}`>
 					(
 						button,
 					): button is IUIActionButton & {
-						context: UIActionButtonContext extends infer X ? (X extends TContext ? X : never) : never;
+						context: UIActionButtonAvailableContexts extends infer X ? (X extends UIActionButtonAvailableContexts ? X : never) : never;
 					} => button.context === context,
 				),
 		}),
