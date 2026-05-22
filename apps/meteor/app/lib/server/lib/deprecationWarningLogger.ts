@@ -31,8 +31,7 @@ export type DeprecationLoggerNextPlannedVersion = '9.0.0';
 // tests intentionally exercise DDP methods through the `/v1/method.call/:method`
 // proxy and via streamer paths; for those runs we set `TEST_MODE_API=true` so
 // the throw is suppressed but the warning is still logged.
-const shouldThrowOnDeprecation = (): boolean =>
-	process.env.TEST_MODE === 'true' && process.env.TEST_MODE_API !== 'true';
+const shouldThrowOnDeprecation = (): boolean => process.env.TEST_MODE === 'true' && process.env.TEST_MODE_API !== 'true';
 
 export const apiDeprecationLogger = ((logger) => {
 	return {
