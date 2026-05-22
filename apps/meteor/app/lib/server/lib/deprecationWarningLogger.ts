@@ -26,12 +26,20 @@ const compareVersions = (version: string, message: string) => {
 
 export type DeprecationLoggerNextPlannedVersion = '9.0.0';
 
+// In TEST_MODE the logger normally throws so accidental usage of a deprecated
+// method/endpoint surfaces immediately in the test run. The API integration
+// tests intentionally exercise DDP methods through the `/v1/method.call/:method`
+// proxy and via streamer paths; for those runs we set `TEST_MODE_API=true` so
+// the throw is suppressed but the warning is still logged.
+const shouldThrowOnDeprecation = (): boolean =>
+	process.env.TEST_MODE === 'true' && process.env.TEST_MODE_API !== 'true';
+
 export const apiDeprecationLogger = ((logger) => {
 	return {
 		endpoint: (endpoint: string, version: DeprecationLoggerNextPlannedVersion, res: Response, info = '') => {
 			const message = `The endpoint "${endpoint}" is deprecated and will be removed on version ${version}${info ? ` (${info})` : ''}`;
 
-			if (process.env.TEST_MODE === 'true') {
+			if (shouldThrowOnDeprecation()) {
 				throw new Error(message);
 			}
 
@@ -59,7 +67,7 @@ export const apiDeprecationLogger = ((logger) => {
 				}) ?? `The parameter "${parameter}" in the endpoint "${endpoint}" is deprecated and will be removed on version ${version}`;
 			compareVersions(version, message);
 
-			if (process.env.TEST_MODE === 'true') {
+			if (shouldThrowOnDeprecation()) {
 				throw new Error(message);
 			}
 
@@ -87,7 +95,7 @@ export const apiDeprecationLogger = ((logger) => {
 					version,
 				}) ?? `The usage of the endpoint "${endpoint}" is deprecated and will be removed on version ${version}`;
 
-			if (process.env.TEST_MODE === 'true') {
+			if (shouldThrowOnDeprecation()) {
 				throw new Error(message);
 			}
 
@@ -114,7 +122,7 @@ export const methodDeprecationLogger = ((logger) => {
 			const paths = infoArray.map((p) => (typeof p === 'string' && p.startsWith('/') ? `"${p}"` : p)).join(' or ');
 			const replacement = infoArray.length > 0 ? `Use the ${paths} endpoint${infoArray.length > 1 ? 's' : ''} instead` : '';
 			const message = `The method "${method}" is deprecated and will be removed on version ${version}${replacement ? ` (${replacement})` : ''}`;
-			if (process.env.TEST_MODE === 'true') {
+			if (shouldThrowOnDeprecation()) {
 				throw new Error(message);
 			}
 			compareVersions(version, message);
@@ -124,7 +132,7 @@ export const methodDeprecationLogger = ((logger) => {
 		},
 		parameter: (method: string, parameter: string, version: DeprecationLoggerNextPlannedVersion) => {
 			const message = `The parameter "${parameter}" in the method "${method}" is deprecated and will be removed on version ${version}`;
-			if (process.env.TEST_MODE === 'true') {
+			if (shouldThrowOnDeprecation()) {
 				throw new Error(message);
 			}
 
@@ -149,7 +157,7 @@ export const methodDeprecationLogger = ((logger) => {
 					version,
 				}) ?? `The usage of the method "${method}" is deprecated and will be removed on version ${version}`;
 
-			if (process.env.TEST_MODE === 'true') {
+			if (shouldThrowOnDeprecation()) {
 				throw new Error(message);
 			}
 
@@ -162,7 +170,7 @@ export const methodDeprecationLogger = ((logger) => {
 		},
 		/** @deprecated */
 		warn: (message: string) => {
-			if (process.env.TEST_MODE === 'true') {
+			if (shouldThrowOnDeprecation()) {
 				throw new Error(message);
 			}
 
