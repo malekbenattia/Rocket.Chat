@@ -27,6 +27,9 @@ declare module '@rocket.chat/ddp-client' {
 }
 
 Meteor.methods<ServerMethods>({
+	/**
+	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
+	 */
 	async 'raix:push-update'(options) {
 		methodDeprecationLogger.method('raix:push-update', '9.0.0', []);
 		logger.debug({ msg: 'Got push token from app', options });

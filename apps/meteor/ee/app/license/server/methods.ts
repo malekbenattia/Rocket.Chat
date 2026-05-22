@@ -17,6 +17,9 @@ declare module '@rocket.chat/ddp-client' {
 }
 
 Meteor.methods<ServerMethods>({
+	/**
+	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
+	 */
 	'license:hasLicense'(feature: string) {
 		methodDeprecationLogger.method('license:hasLicense', '9.0.0', []);
 		check(feature, String);
@@ -26,6 +29,9 @@ Meteor.methods<ServerMethods>({
 	'license:getModules'() {
 		return License.getModules();
 	},
+	/**
+	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
+	 */
 	'license:getTags'() {
 		methodDeprecationLogger.method('license:getTags', '9.0.0', []);
 		return License.getTags();

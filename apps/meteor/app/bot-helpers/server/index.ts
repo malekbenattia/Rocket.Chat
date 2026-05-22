@@ -205,6 +205,9 @@ declare module '@rocket.chat/ddp-client' {
 }
 
 Meteor.methods<ServerMethods>({
+	/**
+	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
+	 */
 	async botRequest(...args) {
 		methodDeprecationLogger.method('botRequest', '9.0.0', []);
 		const userID = Meteor.userId();

@@ -85,6 +85,9 @@ export const addAllUserToRoomFn = async (userId: string, rid: IRoom['_id'], acti
 };
 
 Meteor.methods<ServerMethods>({
+	/**
+	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
+	 */
 	async addAllUserToRoom(rid, activeUsersOnly = false) {
 		methodDeprecationLogger.method('addAllUserToRoom', '9.0.0', []);
 		if (!this.userId) {

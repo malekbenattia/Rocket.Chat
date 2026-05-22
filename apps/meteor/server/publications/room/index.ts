@@ -47,6 +47,9 @@ export const roomsGetMethod = async (userId?: string | null, updatedAt?: Date): 
 };
 
 Meteor.methods<ServerMethods>({
+	/**
+	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
+	 */
 	async 'rooms/get'(updatedAt) {
 		methodDeprecationLogger.method('rooms/get', '9.0.0', []);
 		return roomsGetMethod(Meteor.userId(), updatedAt);

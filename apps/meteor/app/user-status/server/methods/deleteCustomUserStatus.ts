@@ -30,6 +30,9 @@ export const deleteCustomUserStatus = async (userId: string, userStatusID: strin
 };
 
 Meteor.methods<ServerMethods>({
+	/**
+	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
+	 */
 	async deleteCustomUserStatus(userStatusID) {
 		methodDeprecationLogger.method('deleteCustomUserStatus', '9.0.0', []);
 		if (!this.userId) {

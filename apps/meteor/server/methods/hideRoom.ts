@@ -32,6 +32,9 @@ export const hideRoomMethod = async (userId: string, rid: string): Promise<numbe
 };
 
 Meteor.methods<ServerMethods>({
+	/**
+	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
+	 */
 	async hideRoom(rid) {
 		methodDeprecationLogger.method('hideRoom', '9.0.0', '/v1/rooms.leave');
 		const uid = Meteor.userId();

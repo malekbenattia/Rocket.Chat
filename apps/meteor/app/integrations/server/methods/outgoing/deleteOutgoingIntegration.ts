@@ -48,6 +48,9 @@ export const deleteOutgoingIntegration = async (integrationId: string, userId: s
 };
 
 Meteor.methods<ServerMethods>({
+	/**
+	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
+	 */
 	async deleteOutgoingIntegration(integrationId) {
 		methodDeprecationLogger.method('deleteOutgoingIntegration', '9.0.0', []);
 		const userId = Meteor.userId();

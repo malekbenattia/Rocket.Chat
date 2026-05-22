@@ -101,6 +101,9 @@ export const removeRoomModerator = async (fromUserId: IUser['_id'], rid: IRoom['
 };
 
 Meteor.methods<ServerMethods>({
+	/**
+	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
+	 */
 	async removeRoomModerator(rid, userId) {
 		methodDeprecationLogger.method('removeRoomModerator', '9.0.0', []);
 		const uid = Meteor.userId();

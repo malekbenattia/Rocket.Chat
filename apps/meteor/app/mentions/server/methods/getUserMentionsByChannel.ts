@@ -38,6 +38,9 @@ export const getUserMentionsByChannel = async (
 };
 
 Meteor.methods<ServerMethods>({
+	/**
+	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
+	 */
 	async getUserMentionsByChannel({ roomId, options }) {
 		methodDeprecationLogger.method('getUserMentionsByChannel', '9.0.0', '/v1/channels.getAllUserMentionsByChannel');
 		const uid = Meteor.userId();

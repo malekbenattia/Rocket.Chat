@@ -128,6 +128,9 @@ export const removeUserFromRoomMethod = async (fromId: string, data: { rid: stri
 };
 
 Meteor.methods<ServerMethods>({
+	/**
+	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
+	 */
 	async removeUserFromRoom(data) {
 		methodDeprecationLogger.method('removeUserFromRoom', '9.0.0', '/v1/channels.kick');
 		check(

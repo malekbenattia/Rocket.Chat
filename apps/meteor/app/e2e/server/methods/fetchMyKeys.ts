@@ -12,6 +12,9 @@ declare module '@rocket.chat/ddp-client' {
 }
 
 Meteor.methods<ServerMethods>({
+	/**
+	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
+	 */
 	async 'e2e.fetchMyKeys'() {
 		methodDeprecationLogger.method('e2e.fetchMyKeys', '9.0.0', '/v1/e2e.fetchMyKeys');
 		const userId = Meteor.userId();

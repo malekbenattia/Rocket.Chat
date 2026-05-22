@@ -42,6 +42,9 @@ export const setUserPublicAndPrivateKeysMethod = async (
 };
 
 Meteor.methods<ServerMethods>({
+	/**
+	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
+	 */
 	async 'e2e.setUserPublicAndPrivateKeys'(keyPair) {
 		methodDeprecationLogger.method('e2e.setUserPublicAndPrivateKeys', '9.0.0', '/v1/e2e.setUserPublicAndPrivateKeys');
 		const userId = Meteor.userId();

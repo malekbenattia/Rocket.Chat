@@ -13,6 +13,9 @@ declare module '@rocket.chat/ddp-client' {
 }
 
 Meteor.methods<ServerMethods>({
+	/**
+	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
+	 */
 	loadLocale(locale) {
 		methodDeprecationLogger.method('loadLocale', '9.0.0', []);
 		check(locale, String);

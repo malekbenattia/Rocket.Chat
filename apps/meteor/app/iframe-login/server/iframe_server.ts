@@ -33,6 +33,9 @@ declare module '@rocket.chat/ddp-client' {
 }
 
 Meteor.methods<ServerMethods>({
+	/**
+	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
+	 */
 	'OAuth.retrieveCredential'(credentialToken, credentialSecret) {
 		methodDeprecationLogger.method('OAuth.retrieveCredential', '9.0.0', []);
 		return OAuth.retrieveCredential(credentialToken, credentialSecret);

@@ -12,6 +12,9 @@ declare module '@rocket.chat/ddp-client' {
 }
 
 Meteor.methods<ServerMethods>({
+	/**
+	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
+	 */
 	async 'autoTranslate.saveSettings'(rid, field, value, options) {
 		methodDeprecationLogger.method('autoTranslate.saveSettings', '9.0.0', []);
 		const userId = Meteor.userId();

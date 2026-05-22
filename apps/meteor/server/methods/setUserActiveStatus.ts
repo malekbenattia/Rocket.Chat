@@ -34,6 +34,9 @@ export const executeSetUserActiveStatus = async (
 };
 
 Meteor.methods<ServerMethods>({
+	/**
+	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
+	 */
 	async setUserActiveStatus(userId, active, confirmRelinquish) {
 		methodDeprecationLogger.method('setUserActiveStatus', '9.0.0', '/v1/users.setActiveStatus');
 		const uid = Meteor.userId();

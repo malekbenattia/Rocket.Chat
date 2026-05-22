@@ -142,6 +142,9 @@ Meteor.methods<ServerMethods>({
 		return true;
 	},
 
+	/**
+	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
+	 */
 	async addWebdavAccountByToken(data) {
 		methodDeprecationLogger.method('addWebdavAccountByToken', '9.0.0', []);
 		const userId = Meteor.userId();

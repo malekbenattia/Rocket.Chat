@@ -30,6 +30,9 @@ export const toggleFavoriteMethod = async (userId: string, rid: IRoom['_id'], fa
 };
 
 Meteor.methods<ServerMethods>({
+	/**
+	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
+	 */
 	async toggleFavorite(rid, favorite) {
 		methodDeprecationLogger.method('toggleFavorite', '9.0.0', '/v1/rooms.favorite');
 		check(rid, String);

@@ -39,6 +39,9 @@ export const sendForgotPasswordEmail = async (to: string): Promise<boolean | und
 };
 
 Meteor.methods<ServerMethods>({
+	/**
+	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
+	 */
 	async sendForgotPasswordEmail(to) {
 		methodDeprecationLogger.method('sendForgotPasswordEmail', '9.0.0', []);
 		check(to, String);

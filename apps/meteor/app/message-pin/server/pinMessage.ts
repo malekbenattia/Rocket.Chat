@@ -198,6 +198,9 @@ export const unpinMessage = async (userId: string, message: IMessage) => {
 };
 
 Meteor.methods<ServerMethods>({
+	/**
+	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
+	 */
 	async pinMessage(message, pinnedAt) {
 		methodDeprecationLogger.method('pinMessage', '9.0.0', '/v1/chat.pinMessage');
 		check(message._id, String);
@@ -211,6 +214,9 @@ Meteor.methods<ServerMethods>({
 
 		return pinMessage(message, userId, pinnedAt);
 	},
+	/**
+	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
+	 */
 	async unpinMessage(message) {
 		methodDeprecationLogger.method('unpinMessage', '9.0.0', '/v1/chat.unPinMessage');
 		check(message._id, String);

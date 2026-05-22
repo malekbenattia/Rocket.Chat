@@ -35,6 +35,9 @@ export const deleteEmojiCustom = async (userId: string, emojiID: ICustomEmojiDes
 };
 
 Meteor.methods<ServerMethods>({
+	/**
+	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
+	 */
 	async deleteEmojiCustom(emojiID) {
 		methodDeprecationLogger.method('deleteEmojiCustom', '9.0.0', []);
 		if (!this.userId) {

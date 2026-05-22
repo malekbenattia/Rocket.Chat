@@ -247,6 +247,9 @@ Meteor.methods<ServerMethods>({
 	 * @param {string[]} users - users to be added
 	 * @param {boolean} encrypted - if the discussion's e2e encryption should be enabled.
 	 */
+	/**
+	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
+	 */
 	async createDiscussion({ prid, pmid, t_name: discussionName, reply, users, encrypted }: CreateDiscussionProperties) {
 		methodDeprecationLogger.method('createDiscussion', '9.0.0', '/v1/rooms.createDiscussion');
 		check(prid, Match.Maybe(String));

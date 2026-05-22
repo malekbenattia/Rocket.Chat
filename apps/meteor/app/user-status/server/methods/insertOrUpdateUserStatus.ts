@@ -104,6 +104,9 @@ export const insertOrUpdateUserStatus = async (userId: string, userStatusData: I
 };
 
 Meteor.methods<ServerMethods>({
+	/**
+	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
+	 */
 	async insertOrUpdateUserStatus(userStatusData) {
 		methodDeprecationLogger.method('insertOrUpdateUserStatus', '9.0.0', []);
 		if (!this.userId) {

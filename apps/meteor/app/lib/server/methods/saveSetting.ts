@@ -20,6 +20,9 @@ declare module '@rocket.chat/ddp-client' {
 }
 
 Meteor.methods<ServerMethods>({
+	/**
+	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
+	 */
 	saveSetting: twoFactorRequired(async function (_id: string, value: SettingValue, editor: SettingEditor) {
 		methodDeprecationLogger.method('saveSetting', '9.0.0', '/v1/settings/:_id');
 		const uid = Meteor.userId();

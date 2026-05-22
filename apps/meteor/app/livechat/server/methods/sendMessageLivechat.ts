@@ -81,6 +81,9 @@ export const sendMessageLivechat = async ({
 };
 
 Meteor.methods<ServerMethods>({
+	/**
+	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
+	 */
 	async sendMessageLivechat({ token, _id, rid, msg, file, files, attachments }: ILivechatMessage, agent: ILivechatMessageAgent) {
 		methodDeprecationLogger.method('sendMessageLivechat', '9.0.0', []);
 		return sendMessageLivechat({ message: { token, _id, rid, msg, file, files, attachments }, agent });

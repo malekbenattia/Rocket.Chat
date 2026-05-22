@@ -119,6 +119,9 @@ export const updateOutgoingIntegration = async (
 };
 
 Meteor.methods<ServerMethods>({
+	/**
+	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
+	 */
 	async updateOutgoingIntegration(integrationId, _integration) {
 		methodDeprecationLogger.method('updateOutgoingIntegration', '9.0.0', []);
 		if (!this.userId) {

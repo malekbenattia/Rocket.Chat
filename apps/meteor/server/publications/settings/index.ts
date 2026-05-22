@@ -22,6 +22,9 @@ declare module '@rocket.chat/ddp-client' {
 }
 
 Meteor.methods<ServerMethods>({
+	/**
+	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
+	 */
 	async 'public-settings/get'(updatedAt) {
 		methodDeprecationLogger.method('public-settings/get', '9.0.0', []);
 		if (updatedAt instanceof Date) {
@@ -53,6 +56,9 @@ Meteor.methods<ServerMethods>({
 
 		return publicSettings;
 	},
+	/**
+	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
+	 */
 	async 'private-settings/get'(updatedAfter) {
 		methodDeprecationLogger.method('private-settings/get', '9.0.0', []);
 		const uid = Meteor.userId();

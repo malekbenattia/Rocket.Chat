@@ -175,6 +175,9 @@ export const addIncomingIntegration = async (userId: string, integration: INewIn
 };
 
 Meteor.methods<ServerMethods>({
+	/**
+	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
+	 */
 	async addIncomingIntegration(integration: INewIncomingIntegration): Promise<IIncomingIntegration> {
 		methodDeprecationLogger.method('addIncomingIntegration', '9.0.0', []);
 		const { userId } = this;

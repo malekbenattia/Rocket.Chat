@@ -62,6 +62,9 @@ export const starMessage = async (user: IUser, message: Pick<IMessage, 'rid' | '
 };
 
 Meteor.methods<ServerMethods>({
+	/**
+	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
+	 */
 	async starMessage(message) {
 		methodDeprecationLogger.method('starMessage', '9.0.0', '/v1/chat.starMessage');
 		const user = (await Meteor.userAsync()) as IUser;

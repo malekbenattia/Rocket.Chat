@@ -132,6 +132,9 @@ export const saveNotificationSettingsMethod = async (
 };
 
 Meteor.methods<ServerMethods>({
+	/**
+	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
+	 */
 	async saveNotificationSettings(roomId, field, value) {
 		methodDeprecationLogger.method('saveNotificationSettings', '9.0.0', []);
 		const userId = Meteor.userId();
@@ -147,6 +150,9 @@ Meteor.methods<ServerMethods>({
 		return saveNotificationSettingsMethod(userId, roomId, field, value);
 	},
 
+	/**
+	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
+	 */
 	async saveAudioNotificationValue(rid, value) {
 		methodDeprecationLogger.method('saveAudioNotificationValue', '9.0.0', []);
 		const userId = Meteor.userId();

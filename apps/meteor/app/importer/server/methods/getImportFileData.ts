@@ -71,6 +71,9 @@ declare module '@rocket.chat/ddp-client' {
 }
 
 Meteor.methods<ServerMethods>({
+	/**
+	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
+	 */
 	async getImportFileData() {
 		methodDeprecationLogger.method('getImportFileData', '9.0.0', '/v1/getImportFileData');
 		const userId = Meteor.userId();

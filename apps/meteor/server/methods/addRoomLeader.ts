@@ -88,6 +88,9 @@ export const addRoomLeader = async (fromUserId: IUser['_id'], rid: IRoom['_id'],
 };
 
 Meteor.methods<ServerMethods>({
+	/**
+	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
+	 */
 	async addRoomLeader(rid, userId) {
 		methodDeprecationLogger.method('addRoomLeader', '9.0.0', []);
 		const uid = Meteor.userId();

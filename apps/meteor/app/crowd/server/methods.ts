@@ -17,6 +17,9 @@ declare module '@rocket.chat/ddp-client' {
 }
 
 Meteor.methods<ServerMethods>({
+	/**
+	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
+	 */
 	async crowd_test_connection() {
 		methodDeprecationLogger.method('crowd_test_connection', '9.0.0', []);
 		const user = await Meteor.userAsync();
@@ -52,6 +55,9 @@ Meteor.methods<ServerMethods>({
 			throw new Meteor.Error('Invalid connection details', '', { method: 'crowd_test_connection' });
 		}
 	},
+	/**
+	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
+	 */
 	async crowd_sync_users() {
 		methodDeprecationLogger.method('crowd_sync_users', '9.0.0', []);
 		const user = await Meteor.userAsync();

@@ -32,6 +32,9 @@ export const permissionsGetMethod = async (
 };
 
 Meteor.methods<ServerMethods>({
+	/**
+	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
+	 */
 	async 'permissions/get'(updatedAt?: Date) {
 		methodDeprecationLogger.method('permissions/get', '9.0.0', []);
 		check(updatedAt, Match.Maybe(Date));

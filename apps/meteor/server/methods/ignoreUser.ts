@@ -44,6 +44,9 @@ export const ignoreUser = async (
 };
 
 Meteor.methods<ServerMethods>({
+	/**
+	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
+	 */
 	async ignoreUser({ rid, userId: ignoredUser, ignore = true }) {
 		methodDeprecationLogger.method('ignoreUser', '9.0.0', '/v1/chat.ignoreUser');
 		check(ignoredUser, String);

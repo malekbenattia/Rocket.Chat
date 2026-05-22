@@ -20,6 +20,9 @@ declare module '@rocket.chat/ddp-client' {
 }
 
 Meteor.methods<ServerMethods>({
+	/**
+	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
+	 */
 	async insertOrUpdateEmoji(emojiData) {
 		methodDeprecationLogger.method('insertOrUpdateEmoji', '9.0.0', []);
 		const emoji = await insertOrUpdateEmoji(this.userId, emojiData);

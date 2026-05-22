@@ -27,6 +27,9 @@ declare module '@rocket.chat/ddp-client' {
 }
 
 Meteor.methods<ServerMethods>({
+	/**
+	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
+	 */
 	async insertOrUpdateSound(soundData) {
 		methodDeprecationLogger.method('insertOrUpdateSound', '9.0.0', ['/v1/custom-sounds.create', '/v1/custom-sounds.update']);
 		if (!this.userId || !(await hasPermissionAsync(this.userId, 'manage-sounds'))) {

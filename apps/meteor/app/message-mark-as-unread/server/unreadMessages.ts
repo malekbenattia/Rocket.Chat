@@ -81,6 +81,9 @@ export const unreadMessages = async (userId: string, firstUnreadMessage?: Pick<I
 };
 
 Meteor.methods<ServerMethods>({
+	/**
+	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
+	 */
 	async unreadMessages(firstUnreadMessage, room) {
 		methodDeprecationLogger.method('unreadMessages', '9.0.0', '/v1/subscriptions.unread');
 		const userId = Meteor.userId();
