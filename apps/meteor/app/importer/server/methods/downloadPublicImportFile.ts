@@ -9,7 +9,6 @@ import { Meteor } from 'meteor/meteor';
 
 import { Importers } from '..';
 import { hasPermissionAsync } from '../../../authorization/server/functions/hasPermission';
-import { methodDeprecationLogger } from '../../../lib/server/lib/deprecationWarningLogger';
 import { ProgressStep } from '../../lib/ImporterProgressStep';
 import { RocketChatImportFileInstance } from '../startup/store';
 
@@ -88,7 +87,6 @@ Meteor.methods<ServerMethods>({
 	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
 	 */
 	async downloadPublicImportFile(fileUrl: string, importerKey: string) {
-		methodDeprecationLogger.method('downloadPublicImportFile', '9.0.0', '/v1/downloadPublicImportFile');
 		const userId = Meteor.userId();
 
 		if (!userId) {

@@ -4,7 +4,6 @@ import { Subscriptions } from '@rocket.chat/models';
 import { Match, check } from 'meteor/check';
 import { Meteor } from 'meteor/meteor';
 
-import { methodDeprecationLogger } from '../../app/lib/server/lib/deprecationWarningLogger';
 import { notifyOnSubscriptionChangedByRoomIdAndUserId } from '../../app/lib/server/lib/notifyListener';
 
 declare module '@rocket.chat/ddp-client' {
@@ -34,7 +33,6 @@ Meteor.methods<ServerMethods>({
 	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
 	 */
 	async toggleFavorite(rid, favorite) {
-		methodDeprecationLogger.method('toggleFavorite', '9.0.0', '/v1/rooms.favorite');
 		check(rid, String);
 		check(favorite, Match.Optional(Boolean));
 		const userId = Meteor.userId();

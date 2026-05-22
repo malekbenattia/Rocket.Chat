@@ -97,7 +97,6 @@ Meteor.methods<ServerMethods>({
 		return startRegisterWorkspace();
 	},
 	async 'cloud:syncWorkspace'() {
-		methodDeprecationLogger.method('cloud:syncWorkspace', '9.0.0', '/v1/cloud.syncWorkspace');
 		const uid = Meteor.userId();
 
 		if (!uid) {

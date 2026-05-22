@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T16:58:48.693Z",
+  "generatedAt": "2026-05-22T19:21:48.592Z",
   "totals": {
     "registered": 189,
     "used": 77,
@@ -109,7 +109,7 @@
         {
           "method": "UserPresence:away",
           "file": "apps/meteor/server/methods/userPresence.ts",
-          "line": 33
+          "line": 36
         }
       ],
       "callers": [
@@ -128,7 +128,7 @@
         {
           "method": "UserPresence:online",
           "file": "apps/meteor/server/methods/userPresence.ts",
-          "line": 26
+          "line": 29
         }
       ],
       "callers": [
@@ -437,7 +437,7 @@
         {
           "method": "cloud:connectWorkspace",
           "file": "apps/meteor/app/cloud/server/methods.ts",
-          "line": 116
+          "line": 119
         }
       ],
       "callers": [
@@ -475,7 +475,7 @@
         {
           "method": "cloud:syncWorkspace",
           "file": "apps/meteor/app/cloud/server/methods.ts",
-          "line": 96
+          "line": 99
         }
       ],
       "callers": [
@@ -746,7 +746,7 @@
         {
           "method": "getRoomByTypeAndName",
           "file": "apps/meteor/server/publications/room/index.ts",
-          "line": 55
+          "line": 58
         }
       ],
       "callers": [
@@ -927,7 +927,7 @@
         {
           "method": "license:getModules",
           "file": "apps/meteor/ee/app/license/server/methods.ts",
-          "line": 26
+          "line": 29
         }
       ],
       "callers": [
@@ -946,7 +946,7 @@
         {
           "method": "license:isEnterprise",
           "file": "apps/meteor/ee/app/license/server/methods.ts",
-          "line": 33
+          "line": 39
         }
       ],
       "callers": [
@@ -1549,7 +1549,7 @@
         {
           "method": "OAuth.retrieveCredential",
           "file": "apps/meteor/app/iframe-login/server/iframe_server.ts",
-          "line": 36
+          "line": 39
         }
       ],
       "callers": [],
@@ -1562,7 +1562,7 @@
         {
           "method": "OEmbedCacheCleanup",
           "file": "apps/meteor/server/methods/OEmbedCacheCleanup.ts",
-          "line": 24
+          "line": 27
         }
       ],
       "callers": [],
@@ -1575,7 +1575,7 @@
         {
           "method": "UserPresence:setDefaultStatus",
           "file": "apps/meteor/server/methods/userPresence.ts",
-          "line": 18
+          "line": 21
         }
       ],
       "callers": [],
@@ -1588,7 +1588,7 @@
         {
           "method": "addAllUserToRoom",
           "file": "apps/meteor/server/methods/addAllUserToRoom.ts",
-          "line": 88
+          "line": 91
         }
       ],
       "callers": [],
@@ -1601,7 +1601,7 @@
         {
           "method": "addIncomingIntegration",
           "file": "apps/meteor/app/integrations/server/methods/incoming/addIncomingIntegration.ts",
-          "line": 178
+          "line": 181
         }
       ],
       "callers": [],
@@ -1614,7 +1614,7 @@
         {
           "method": "addOutgoingIntegration",
           "file": "apps/meteor/app/integrations/server/methods/outgoing/addOutgoingIntegration.ts",
-          "line": 78
+          "line": 81
         }
       ],
       "callers": [],
@@ -1627,7 +1627,7 @@
         {
           "method": "addRoomLeader",
           "file": "apps/meteor/server/methods/addRoomLeader.ts",
-          "line": 91
+          "line": 94
         }
       ],
       "callers": [],
@@ -1640,7 +1640,7 @@
         {
           "method": "addRoomModerator",
           "file": "apps/meteor/server/methods/addRoomModerator.ts",
-          "line": 113
+          "line": 116
         }
       ],
       "callers": [],
@@ -1653,7 +1653,7 @@
         {
           "method": "addRoomOwner",
           "file": "apps/meteor/server/methods/addRoomOwner.ts",
-          "line": 110
+          "line": 113
         }
       ],
       "callers": [],
@@ -1666,7 +1666,7 @@
         {
           "method": "addSamlService",
           "file": "apps/meteor/app/meteor-accounts-saml/server/methods/addSamlService.ts",
-          "line": 15
+          "line": 18
         }
       ],
       "callers": [],
@@ -1679,7 +1679,7 @@
         {
           "method": "addUserToRoom",
           "file": "apps/meteor/app/lib/server/methods/addUserToRoom.ts",
-          "line": 15
+          "line": 18
         }
       ],
       "callers": [],
@@ -1692,7 +1692,7 @@
         {
           "method": "addWebdavAccountByToken",
           "file": "apps/meteor/app/webdav/server/methods/addWebdavAccount.ts",
-          "line": 145
+          "line": 148
         }
       ],
       "callers": [],
@@ -1705,7 +1705,7 @@
         {
           "method": "archiveRoom",
           "file": "apps/meteor/app/lib/server/methods/archiveRoom.ts",
-          "line": 45
+          "line": 48
         }
       ],
       "callers": [],
@@ -1718,7 +1718,7 @@
         {
           "method": "autoTranslate.saveSettings",
           "file": "apps/meteor/app/autotranslate/server/methods/saveSettings.ts",
-          "line": 15
+          "line": 18
         }
       ],
       "callers": [],
@@ -1731,7 +1731,7 @@
         {
           "method": "blockUser",
           "file": "apps/meteor/app/lib/server/methods/blockUser.ts",
-          "line": 19
+          "line": 22
         }
       ],
       "callers": [],
@@ -1744,7 +1744,7 @@
         {
           "method": "botRequest",
           "file": "apps/meteor/app/bot-helpers/server/index.ts",
-          "line": 208
+          "line": 211
         }
       ],
       "callers": [],
@@ -1757,7 +1757,7 @@
         {
           "method": "browseChannels",
           "file": "apps/meteor/server/methods/browseChannels.ts",
-          "line": 349
+          "line": 352
         }
       ],
       "callers": [],
@@ -1770,7 +1770,7 @@
         {
           "method": "channelsList",
           "file": "apps/meteor/server/methods/channelsList.ts",
-          "line": 23
+          "line": 26
         }
       ],
       "callers": [],
@@ -1783,7 +1783,7 @@
         {
           "method": "checkFederationConfiguration",
           "file": "apps/meteor/app/lib/server/methods/checkFederationConfiguration.ts",
-          "line": 16
+          "line": 19
         }
       ],
       "callers": [],
@@ -1796,7 +1796,7 @@
         {
           "method": "cleanRoomHistory",
           "file": "apps/meteor/app/lib/server/methods/cleanRoomHistory.ts",
-          "line": 70
+          "line": 73
         }
       ],
       "callers": [],
@@ -1822,7 +1822,7 @@
         {
           "method": "cloud:checkUserLoggedIn",
           "file": "apps/meteor/app/cloud/server/methods.ts",
-          "line": 180
+          "line": 192
         }
       ],
       "callers": [],
@@ -1835,7 +1835,7 @@
         {
           "method": "cloud:finishOAuthAuthorization",
           "file": "apps/meteor/app/cloud/server/methods.ts",
-          "line": 159
+          "line": 168
         }
       ],
       "callers": [],
@@ -1848,7 +1848,7 @@
         {
           "method": "cloud:getOAuthAuthorizationUrl",
           "file": "apps/meteor/app/cloud/server/methods.ts",
-          "line": 142
+          "line": 148
         }
       ],
       "callers": [],
@@ -1861,7 +1861,7 @@
         {
           "method": "cloud:logout",
           "file": "apps/meteor/app/cloud/server/methods.ts",
-          "line": 197
+          "line": 212
         }
       ],
       "callers": [],
@@ -1874,7 +1874,7 @@
         {
           "method": "cloud:registerWorkspace",
           "file": "apps/meteor/app/cloud/server/methods.ts",
-          "line": 78
+          "line": 81
         }
       ],
       "callers": [],
@@ -1887,7 +1887,7 @@
         {
           "method": "createChannel",
           "file": "apps/meteor/app/lib/server/methods/createChannel.ts",
-          "line": 63
+          "line": 66
         }
       ],
       "callers": [],
@@ -1900,7 +1900,7 @@
         {
           "method": "createDiscussion",
           "file": "apps/meteor/app/discussion/server/methods/createDiscussion.ts",
-          "line": 250
+          "line": 253
         }
       ],
       "callers": [],
@@ -1913,7 +1913,7 @@
         {
           "method": "crowd_sync_users",
           "file": "apps/meteor/app/crowd/server/methods.ts",
-          "line": 55
+          "line": 61
         }
       ],
       "callers": [],
@@ -1926,7 +1926,7 @@
         {
           "method": "crowd_test_connection",
           "file": "apps/meteor/app/crowd/server/methods.ts",
-          "line": 20
+          "line": 23
         }
       ],
       "callers": [],
@@ -1939,7 +1939,7 @@
         {
           "method": "deleteCustomUserStatus",
           "file": "apps/meteor/app/user-status/server/methods/deleteCustomUserStatus.ts",
-          "line": 33
+          "line": 36
         }
       ],
       "callers": [],
@@ -1952,7 +1952,7 @@
         {
           "method": "deleteEmojiCustom",
           "file": "apps/meteor/app/emoji-custom/server/methods/deleteEmojiCustom.ts",
-          "line": 38
+          "line": 41
         }
       ],
       "callers": [],
@@ -1965,7 +1965,7 @@
         {
           "method": "deleteIncomingIntegration",
           "file": "apps/meteor/app/integrations/server/methods/incoming/deleteIncomingIntegration.ts",
-          "line": 43
+          "line": 46
         }
       ],
       "callers": [],
@@ -1978,7 +1978,7 @@
         {
           "method": "deleteOAuthApp",
           "file": "apps/meteor/app/oauth2-server-config/server/admin/methods/deleteOAuthApp.ts",
-          "line": 37
+          "line": 40
         }
       ],
       "callers": [],
@@ -1991,7 +1991,7 @@
         {
           "method": "deleteOutgoingIntegration",
           "file": "apps/meteor/app/integrations/server/methods/outgoing/deleteOutgoingIntegration.ts",
-          "line": 51
+          "line": 54
         }
       ],
       "callers": [],
@@ -2004,7 +2004,7 @@
         {
           "method": "deleteUser",
           "file": "apps/meteor/server/methods/deleteUser.ts",
-          "line": 49
+          "line": 52
         }
       ],
       "callers": [],
@@ -2017,7 +2017,7 @@
         {
           "method": "deleteUserOwnAccount",
           "file": "apps/meteor/app/lib/server/methods/deleteUserOwnAccount.ts",
-          "line": 66
+          "line": 69
         }
       ],
       "callers": [],
@@ -2030,7 +2030,7 @@
         {
           "method": "downloadPublicImportFile",
           "file": "apps/meteor/app/importer/server/methods/downloadPublicImportFile.ts",
-          "line": 87
+          "line": 90
         }
       ],
       "callers": [],
@@ -2043,7 +2043,7 @@
         {
           "method": "e2e.fetchMyKeys",
           "file": "apps/meteor/app/e2e/server/methods/fetchMyKeys.ts",
-          "line": 15
+          "line": 18
         }
       ],
       "callers": [],
@@ -2056,7 +2056,7 @@
         {
           "method": "e2e.setUserPublicAndPrivateKeys",
           "file": "apps/meteor/app/e2e/server/methods/setUserPublicAndPrivateKeys.ts",
-          "line": 45
+          "line": 48
         }
       ],
       "callers": [],
@@ -2069,7 +2069,7 @@
         {
           "method": "followMessage",
           "file": "apps/meteor/app/threads/server/methods/followMessage.ts",
-          "line": 53
+          "line": 56
         }
       ],
       "callers": [],
@@ -2082,7 +2082,7 @@
         {
           "method": "getChannelHistory",
           "file": "apps/meteor/app/lib/server/methods/getChannelHistory.ts",
-          "line": 158
+          "line": 161
         }
       ],
       "callers": [],
@@ -2095,7 +2095,7 @@
         {
           "method": "getImportFileData",
           "file": "apps/meteor/app/importer/server/methods/getImportFileData.ts",
-          "line": 74
+          "line": 77
         }
       ],
       "callers": [],
@@ -2108,7 +2108,7 @@
         {
           "method": "getImportProgress",
           "file": "apps/meteor/app/importer/server/methods/getImportProgress.ts",
-          "line": 35
+          "line": 38
         }
       ],
       "callers": [],
@@ -2121,7 +2121,7 @@
         {
           "method": "getLatestImportOperations",
           "file": "apps/meteor/app/importer/server/methods/getLatestImportOperations.ts",
-          "line": 29
+          "line": 32
         }
       ],
       "callers": [],
@@ -2134,7 +2134,7 @@
         {
           "method": "getRoomIdByNameOrId",
           "file": "apps/meteor/server/methods/getRoomIdByNameOrId.ts",
-          "line": 18
+          "line": 21
         }
       ],
       "callers": [],
@@ -2160,7 +2160,7 @@
         {
           "method": "getRoomNameById",
           "file": "apps/meteor/server/methods/getRoomNameById.ts",
-          "line": 18
+          "line": 21
         }
       ],
       "callers": [],
@@ -2173,7 +2173,7 @@
         {
           "method": "getS3FileUrl",
           "file": "apps/meteor/app/file-upload/server/methods/getS3FileUrl.ts",
-          "line": 19
+          "line": 22
         }
       ],
       "callers": [],
@@ -2186,7 +2186,7 @@
         {
           "method": "getStatistics",
           "file": "apps/meteor/app/statistics/server/methods/getStatistics.ts",
-          "line": 16
+          "line": 19
         }
       ],
       "callers": [],
@@ -2199,7 +2199,7 @@
         {
           "method": "getThreadsList",
           "file": "apps/meteor/app/threads/server/methods/getThreadsList.ts",
-          "line": 20
+          "line": 23
         }
       ],
       "callers": [],
@@ -2212,7 +2212,7 @@
         {
           "method": "getTotalChannels",
           "file": "apps/meteor/server/methods/getTotalChannels.ts",
-          "line": 15
+          "line": 18
         }
       ],
       "callers": [],
@@ -2225,7 +2225,7 @@
         {
           "method": "getUserMentionsByChannel",
           "file": "apps/meteor/app/mentions/server/methods/getUserMentionsByChannel.ts",
-          "line": 41
+          "line": 44
         }
       ],
       "callers": [],
@@ -2238,7 +2238,7 @@
         {
           "method": "getUserStatusText",
           "file": "apps/meteor/app/user-status/server/methods/getUserStatusText.ts",
-          "line": 15
+          "line": 18
         }
       ],
       "callers": [],
@@ -2251,7 +2251,7 @@
         {
           "method": "getUsernameSuggestion",
           "file": "apps/meteor/app/lib/server/methods/getUsernameSuggestion.ts",
-          "line": 15
+          "line": 18
         }
       ],
       "callers": [],
@@ -2264,7 +2264,7 @@
         {
           "method": "getUsersOfRoom",
           "file": "apps/meteor/server/methods/getUsersOfRoom.ts",
-          "line": 29
+          "line": 32
         }
       ],
       "callers": [],
@@ -2277,7 +2277,7 @@
         {
           "method": "hideRoom",
           "file": "apps/meteor/server/methods/hideRoom.ts",
-          "line": 35
+          "line": 38
         }
       ],
       "callers": [],
@@ -2290,7 +2290,7 @@
         {
           "method": "ignoreUser",
           "file": "apps/meteor/server/methods/ignoreUser.ts",
-          "line": 47
+          "line": 50
         }
       ],
       "callers": [],
@@ -2303,7 +2303,7 @@
         {
           "method": "insertOrUpdateEmoji",
           "file": "apps/meteor/app/emoji-custom/server/methods/insertOrUpdateEmoji.ts",
-          "line": 23
+          "line": 26
         }
       ],
       "callers": [],
@@ -2316,7 +2316,7 @@
         {
           "method": "insertOrUpdateSound",
           "file": "apps/meteor/app/custom-sounds/server/methods/insertOrUpdateSound.ts",
-          "line": 30
+          "line": 33
         }
       ],
       "callers": [],
@@ -2329,7 +2329,7 @@
         {
           "method": "insertOrUpdateUserStatus",
           "file": "apps/meteor/app/user-status/server/methods/insertOrUpdateUserStatus.ts",
-          "line": 107
+          "line": 110
         }
       ],
       "callers": [],
@@ -2342,7 +2342,7 @@
         {
           "method": "joinDefaultChannels",
           "file": "apps/meteor/app/lib/server/methods/joinDefaultChannels.ts",
-          "line": 17
+          "line": 20
         }
       ],
       "callers": [],
@@ -2355,7 +2355,7 @@
         {
           "method": "license:getTags",
           "file": "apps/meteor/ee/app/license/server/methods.ts",
-          "line": 29
+          "line": 35
         }
       ],
       "callers": [],
@@ -2368,7 +2368,7 @@
         {
           "method": "license:hasLicense",
           "file": "apps/meteor/ee/app/license/server/methods.ts",
-          "line": 20
+          "line": 23
         }
       ],
       "callers": [],
@@ -2381,7 +2381,7 @@
         {
           "method": "loadLocale",
           "file": "apps/meteor/server/methods/loadLocale.ts",
-          "line": 16
+          "line": 19
         }
       ],
       "callers": [],
@@ -2394,7 +2394,7 @@
         {
           "method": "messageSearch",
           "file": "apps/meteor/server/methods/messageSearch.ts",
-          "line": 90
+          "line": 93
         }
       ],
       "callers": [],
@@ -2407,7 +2407,7 @@
         {
           "method": "messages/get",
           "file": "apps/meteor/server/publications/messages.ts",
-          "line": 277
+          "line": 280
         }
       ],
       "callers": [],
@@ -2420,7 +2420,7 @@
         {
           "method": "openRoom",
           "file": "apps/meteor/server/methods/openRoom.ts",
-          "line": 17
+          "line": 20
         }
       ],
       "callers": [],
@@ -2433,7 +2433,7 @@
         {
           "method": "permissions/get",
           "file": "apps/meteor/app/authorization/server/streamer/permissions/index.ts",
-          "line": 35
+          "line": 38
         }
       ],
       "callers": [],
@@ -2446,7 +2446,7 @@
         {
           "method": "pinMessage",
           "file": "apps/meteor/app/message-pin/server/pinMessage.ts",
-          "line": 201
+          "line": 204
         }
       ],
       "callers": [],
@@ -2459,7 +2459,7 @@
         {
           "method": "private-settings/get",
           "file": "apps/meteor/server/publications/settings/index.ts",
-          "line": 56
+          "line": 62
         }
       ],
       "callers": [],
@@ -2472,7 +2472,7 @@
         {
           "method": "public-settings/get",
           "file": "apps/meteor/server/publications/settings/index.ts",
-          "line": 25
+          "line": 28
         }
       ],
       "callers": [],
@@ -2485,7 +2485,7 @@
         {
           "method": "push_test",
           "file": "apps/meteor/server/lib/pushConfig.ts",
-          "line": 41
+          "line": 44
         }
       ],
       "callers": [],
@@ -2498,7 +2498,7 @@
         {
           "method": "raix:push-update",
           "file": "apps/meteor/app/push/server/methods.ts",
-          "line": 30
+          "line": 33
         }
       ],
       "callers": [],
@@ -2511,7 +2511,7 @@
         {
           "method": "readMessages",
           "file": "apps/meteor/server/methods/readMessages.ts",
-          "line": 19
+          "line": 22
         }
       ],
       "callers": [],
@@ -2524,7 +2524,7 @@
         {
           "method": "removeRoomLeader",
           "file": "apps/meteor/server/methods/removeRoomLeader.ts",
-          "line": 91
+          "line": 94
         }
       ],
       "callers": [],
@@ -2537,7 +2537,7 @@
         {
           "method": "removeRoomModerator",
           "file": "apps/meteor/server/methods/removeRoomModerator.ts",
-          "line": 104
+          "line": 107
         }
       ],
       "callers": [],
@@ -2550,7 +2550,7 @@
         {
           "method": "removeRoomOwner",
           "file": "apps/meteor/server/methods/removeRoomOwner.ts",
-          "line": 109
+          "line": 112
         }
       ],
       "callers": [],
@@ -2563,7 +2563,7 @@
         {
           "method": "removeSlackBridgeChannelLinks",
           "file": "apps/meteor/app/slackbridge/server/removeChannelLinks.ts",
-          "line": 17
+          "line": 20
         }
       ],
       "callers": [],
@@ -2576,7 +2576,7 @@
         {
           "method": "removeUserFromRoom",
           "file": "apps/meteor/server/methods/removeUserFromRoom.ts",
-          "line": 131
+          "line": 134
         }
       ],
       "callers": [],
@@ -2589,7 +2589,7 @@
         {
           "method": "resetAvatar",
           "file": "apps/meteor/server/methods/resetAvatar.ts",
-          "line": 52
+          "line": 55
         }
       ],
       "callers": [],
@@ -2602,7 +2602,7 @@
         {
           "method": "resetIrcConnection",
           "file": "apps/meteor/app/irc/server/methods/resetIrcConnection.ts",
-          "line": 20
+          "line": 23
         }
       ],
       "callers": [],
@@ -2615,7 +2615,7 @@
         {
           "method": "restart_server",
           "file": "apps/meteor/app/lib/server/methods/restartServer.ts",
-          "line": 18
+          "line": 21
         }
       ],
       "callers": [],
@@ -2628,7 +2628,7 @@
         {
           "method": "rocketchatSearch.suggest",
           "file": "apps/meteor/app/search/server/methods.ts",
-          "line": 75
+          "line": 78
         }
       ],
       "callers": [],
@@ -2641,7 +2641,7 @@
         {
           "method": "rooms/get",
           "file": "apps/meteor/server/publications/room/index.ts",
-          "line": 50
+          "line": 53
         }
       ],
       "callers": [],
@@ -2654,7 +2654,7 @@
         {
           "method": "samlLogout",
           "file": "apps/meteor/app/meteor-accounts-saml/server/methods/samlLogout.ts",
-          "line": 37
+          "line": 40
         }
       ],
       "callers": [],
@@ -2667,7 +2667,7 @@
         {
           "method": "saveAudioNotificationValue",
           "file": "apps/meteor/app/push-notifications/server/methods/saveNotificationSettings.ts",
-          "line": 150
+          "line": 156
         }
       ],
       "callers": [],
@@ -2680,7 +2680,7 @@
         {
           "method": "saveNotificationSettings",
           "file": "apps/meteor/app/push-notifications/server/methods/saveNotificationSettings.ts",
-          "line": 135
+          "line": 138
         }
       ],
       "callers": [],
@@ -2693,7 +2693,7 @@
         {
           "method": "saveSetting",
           "file": "apps/meteor/app/lib/server/methods/saveSetting.ts",
-          "line": 23
+          "line": 26
         }
       ],
       "callers": [],
@@ -2706,7 +2706,7 @@
         {
           "method": "saveUserPreferences",
           "file": "apps/meteor/server/methods/saveUserPreferences.ts",
-          "line": 224
+          "line": 227
         }
       ],
       "callers": [],
@@ -2719,7 +2719,7 @@
         {
           "method": "sendFileMessage",
           "file": "apps/meteor/app/file-upload/server/methods/sendFileMessage.ts",
-          "line": 244
+          "line": 247
         }
       ],
       "callers": [],
@@ -2732,7 +2732,7 @@
         {
           "method": "sendForgotPasswordEmail",
           "file": "apps/meteor/server/methods/sendForgotPasswordEmail.ts",
-          "line": 42
+          "line": 45
         }
       ],
       "callers": [],
@@ -2745,7 +2745,7 @@
         {
           "method": "sendMessageLivechat",
           "file": "apps/meteor/app/livechat/server/methods/sendMessageLivechat.ts",
-          "line": 84
+          "line": 87
         }
       ],
       "callers": [],
@@ -2758,7 +2758,7 @@
         {
           "method": "sendSMTPTestEmail",
           "file": "apps/meteor/app/lib/server/methods/sendSMTPTestEmail.ts",
-          "line": 20
+          "line": 23
         }
       ],
       "callers": [],
@@ -2771,7 +2771,7 @@
         {
           "method": "setEmail",
           "file": "apps/meteor/app/lib/server/methods/setEmail.ts",
-          "line": 42
+          "line": 45
         }
       ],
       "callers": [],
@@ -2784,7 +2784,7 @@
         {
           "method": "setRealName",
           "file": "apps/meteor/app/lib/server/methods/setRealName.ts",
-          "line": 18
+          "line": 21
         }
       ],
       "callers": [],
@@ -2797,7 +2797,7 @@
         {
           "method": "setUserActiveStatus",
           "file": "apps/meteor/server/methods/setUserActiveStatus.ts",
-          "line": 37
+          "line": 40
         }
       ],
       "callers": [],
@@ -2810,7 +2810,7 @@
         {
           "method": "starMessage",
           "file": "apps/meteor/app/message-star/server/starMessage.ts",
-          "line": 65
+          "line": 68
         }
       ],
       "callers": [],
@@ -2823,7 +2823,7 @@
         {
           "method": "startImport",
           "file": "apps/meteor/app/importer/server/methods/startImport.ts",
-          "line": 36
+          "line": 39
         }
       ],
       "callers": [],
@@ -2836,7 +2836,7 @@
         {
           "method": "toggleFavorite",
           "file": "apps/meteor/server/methods/toggleFavorite.ts",
-          "line": 33
+          "line": 36
         }
       ],
       "callers": [],
@@ -2849,7 +2849,7 @@
         {
           "method": "unarchiveRoom",
           "file": "apps/meteor/app/lib/server/methods/unarchiveRoom.ts",
-          "line": 40
+          "line": 43
         }
       ],
       "callers": [],
@@ -2862,7 +2862,7 @@
         {
           "method": "unblockUser",
           "file": "apps/meteor/app/lib/server/methods/unblockUser.ts",
-          "line": 17
+          "line": 20
         }
       ],
       "callers": [],
@@ -2875,7 +2875,7 @@
         {
           "method": "unfollowMessage",
           "file": "apps/meteor/app/threads/server/methods/unfollowMessage.ts",
-          "line": 53
+          "line": 56
         }
       ],
       "callers": [],
@@ -2888,7 +2888,7 @@
         {
           "method": "unpinMessage",
           "file": "apps/meteor/app/message-pin/server/pinMessage.ts",
-          "line": 214
+          "line": 220
         }
       ],
       "callers": [],
@@ -2901,7 +2901,7 @@
         {
           "method": "unreadMessages",
           "file": "apps/meteor/app/message-mark-as-unread/server/unreadMessages.ts",
-          "line": 84
+          "line": 87
         }
       ],
       "callers": [],
@@ -2914,7 +2914,7 @@
         {
           "method": "updateIncomingIntegration",
           "file": "apps/meteor/app/integrations/server/methods/incoming/updateIncomingIntegration.ts",
-          "line": 194
+          "line": 197
         }
       ],
       "callers": [],
@@ -2927,7 +2927,7 @@
         {
           "method": "updateMessage",
           "file": "apps/meteor/app/lib/server/methods/updateMessage.ts",
-          "line": 103
+          "line": 106
         }
       ],
       "callers": [],
@@ -2940,7 +2940,7 @@
         {
           "method": "updateOAuthApp",
           "file": "apps/meteor/app/oauth2-server-config/server/admin/methods/updateOAuthApp.ts",
-          "line": 80
+          "line": 83
         }
       ],
       "callers": [],
@@ -2953,7 +2953,7 @@
         {
           "method": "updateOutgoingIntegration",
           "file": "apps/meteor/app/integrations/server/methods/outgoing/updateOutgoingIntegration.ts",
-          "line": 122
+          "line": 125
         }
       ],
       "callers": [],
@@ -2966,7 +2966,7 @@
         {
           "method": "uploadCustomSound",
           "file": "apps/meteor/app/custom-sounds/server/methods/uploadCustomSound.ts",
-          "line": 18
+          "line": 21
         }
       ],
       "callers": [],
@@ -2979,7 +2979,7 @@
         {
           "method": "uploadEmojiCustom",
           "file": "apps/meteor/app/emoji-custom/server/methods/uploadEmojiCustom.ts",
-          "line": 23
+          "line": 26
         }
       ],
       "callers": [],
@@ -2992,7 +2992,7 @@
         {
           "method": "uploadImportFile",
           "file": "apps/meteor/app/importer/server/methods/uploadImportFile.ts",
-          "line": 67
+          "line": 70
         }
       ],
       "callers": [],
@@ -3102,7 +3102,7 @@
         {
           "method": "UserPresence:away",
           "file": "apps/meteor/server/methods/userPresence.ts",
-          "line": 33
+          "line": 36
         }
       ],
       "callers": [
@@ -3121,7 +3121,7 @@
         {
           "method": "UserPresence:online",
           "file": "apps/meteor/server/methods/userPresence.ts",
-          "line": 26
+          "line": 29
         }
       ],
       "callers": [
@@ -3387,7 +3387,7 @@
         {
           "method": "cloud:connectWorkspace",
           "file": "apps/meteor/app/cloud/server/methods.ts",
-          "line": 116
+          "line": 119
         }
       ],
       "callers": [
@@ -3539,7 +3539,7 @@
         {
           "method": "getRoomByTypeAndName",
           "file": "apps/meteor/server/publications/room/index.ts",
-          "line": 55
+          "line": 58
         }
       ],
       "callers": [
@@ -3663,7 +3663,7 @@
         {
           "method": "license:isEnterprise",
           "file": "apps/meteor/ee/app/license/server/methods.ts",
-          "line": 33
+          "line": 39
         }
       ],
       "callers": [

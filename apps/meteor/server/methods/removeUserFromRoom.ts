@@ -9,7 +9,6 @@ import { Meteor } from 'meteor/meteor';
 import { canAccessRoomAsync } from '../../app/authorization/server';
 import { hasPermissionAsync } from '../../app/authorization/server/functions/hasPermission';
 import { hasRoleAsync } from '../../app/authorization/server/functions/hasRole';
-import { methodDeprecationLogger } from '../../app/lib/server/lib/deprecationWarningLogger';
 import { notifyOnRoomChanged, notifyOnSubscriptionChanged } from '../../app/lib/server/lib/notifyListener';
 import { settings } from '../../app/settings/server';
 import { RoomMemberActions } from '../../definition/IRoomTypeConfig';
@@ -132,7 +131,6 @@ Meteor.methods<ServerMethods>({
 	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
 	 */
 	async removeUserFromRoom(data) {
-		methodDeprecationLogger.method('removeUserFromRoom', '9.0.0', '/v1/channels.kick');
 		check(
 			data,
 			Match.ObjectIncluding({

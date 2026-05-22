@@ -6,7 +6,6 @@ import { Meteor } from 'meteor/meteor';
 
 import { hasPermissionAsync } from '../../app/authorization/server/functions/hasPermission';
 import { deleteUser } from '../../app/lib/server/functions/deleteUser';
-import { methodDeprecationLogger } from '../../app/lib/server/lib/deprecationWarningLogger';
 
 declare module '@rocket.chat/ddp-client' {
 	// eslint-disable-next-line @typescript-eslint/naming-convention
@@ -50,7 +49,6 @@ Meteor.methods<ServerMethods>({
 	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
 	 */
 	async deleteUser(userId, confirmRelinquish = false) {
-		methodDeprecationLogger.method('deleteUser', '9.0.0', '/v1/users.delete');
 		check(userId, String);
 
 		const uid = Meteor.userId();

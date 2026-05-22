@@ -5,7 +5,6 @@ import { Match, check } from 'meteor/check';
 import { Meteor } from 'meteor/meteor';
 
 import { canAccessRoomIdAsync } from '../../app/authorization/server/functions/canAccessRoom';
-import { methodDeprecationLogger } from '../../app/lib/server/lib/deprecationWarningLogger';
 import type { IRawSearchResult } from '../../app/search/server/model/ISearchResult';
 import { settings } from '../../app/settings/server';
 import { readSecondaryPreferred } from '../database/readSecondaryPreferred';
@@ -91,7 +90,6 @@ Meteor.methods<ServerMethods>({
 	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
 	 */
 	async messageSearch(text, rid, limit, offset) {
-		methodDeprecationLogger.method('messageSearch', '9.0.0', '/v1/chat.search');
 		const currentUserId = Meteor.userId();
 		if (!currentUserId) {
 			throw new Meteor.Error('error-invalid-user', 'Invalid user', {

@@ -5,7 +5,6 @@ import { Meteor } from 'meteor/meteor';
 
 import { Importers } from '..';
 import { hasPermissionAsync } from '../../../authorization/server/functions/hasPermission';
-import { methodDeprecationLogger } from '../../../lib/server/lib/deprecationWarningLogger';
 
 export const executeGetImportProgress = async (): Promise<IImportProgress> => {
 	const operation = await Imports.findLastImport();
@@ -36,7 +35,6 @@ Meteor.methods<ServerMethods>({
 	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
 	 */
 	async getImportProgress() {
-		methodDeprecationLogger.method('getImportProgress', '9.0.0', '/v1/getImportProgress');
 		const userId = Meteor.userId();
 		if (!userId) {
 			throw new Meteor.Error('error-invalid-user', 'Invalid user', 'getImportProgress');

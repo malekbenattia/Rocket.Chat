@@ -6,7 +6,6 @@ import _ from 'underscore';
 
 import { canAccessRoomAsync } from '../../../app/authorization/server';
 import { hasPermissionAsync } from '../../../app/authorization/server/functions/hasPermission';
-import { methodDeprecationLogger } from '../../../app/lib/server/lib/deprecationWarningLogger';
 import { settings } from '../../../app/settings/server';
 import { roomFields } from '../../../lib/publishFields';
 import { roomCoordinator } from '../../lib/rooms/roomCoordinator';
@@ -51,12 +50,10 @@ Meteor.methods<ServerMethods>({
 	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
 	 */
 	async 'rooms/get'(updatedAt) {
-		methodDeprecationLogger.method('rooms/get', '9.0.0', []);
 		return roomsGetMethod(Meteor.userId(), updatedAt);
 	},
 
 	async 'getRoomByTypeAndName'(type, name) {
-		methodDeprecationLogger.method('getRoomByTypeAndName', '9.0.0', []);
 		if (!type || !name) {
 			throw new Meteor.Error('error-invalid-room', 'Invalid room', {
 				method: 'getRoomByTypeAndName',

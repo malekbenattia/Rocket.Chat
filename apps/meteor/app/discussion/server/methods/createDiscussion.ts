@@ -15,7 +15,6 @@ import { attachMessage } from '../../../lib/server/functions/attachMessage';
 import { createRoom } from '../../../lib/server/functions/createRoom';
 import { sendMessage } from '../../../lib/server/functions/sendMessage';
 import { afterSaveMessageAsync } from '../../../lib/server/lib/afterSaveMessage';
-import { methodDeprecationLogger } from '../../../lib/server/lib/deprecationWarningLogger';
 import { settings } from '../../../settings/server';
 
 const getParentRoom = async (rid: IRoom['_id']) => {
@@ -251,7 +250,6 @@ Meteor.methods<ServerMethods>({
 	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
 	 */
 	async createDiscussion({ prid, pmid, t_name: discussionName, reply, users, encrypted }: CreateDiscussionProperties) {
-		methodDeprecationLogger.method('createDiscussion', '9.0.0', '/v1/rooms.createDiscussion');
 		check(prid, Match.Maybe(String));
 		check(pmid, Match.Maybe(String));
 		check(reply, Match.Maybe(String));

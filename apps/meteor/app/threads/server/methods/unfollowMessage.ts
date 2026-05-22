@@ -7,7 +7,6 @@ import { Meteor } from 'meteor/meteor';
 
 import { canAccessRoomIdAsync } from '../../../authorization/server/functions/canAccessRoom';
 import { RateLimiter } from '../../../lib/server';
-import { methodDeprecationLogger } from '../../../lib/server/lib/deprecationWarningLogger';
 import { notifyOnMessageChange } from '../../../lib/server/lib/notifyListener';
 import { settings } from '../../../settings/server';
 import { unfollow } from '../functions';
@@ -54,7 +53,6 @@ Meteor.methods<ServerMethods>({
 	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
 	 */
 	async unfollowMessage({ mid }) {
-		methodDeprecationLogger.method('unfollowMessage', '9.0.0', '/v1/chat.unfollowMessage');
 		check(mid, String);
 
 		const user = (await Meteor.userAsync()) as IUser;

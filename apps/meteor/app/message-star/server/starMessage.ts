@@ -6,7 +6,6 @@ import { Meteor } from 'meteor/meteor';
 
 import { canAccessRoomAsync, roomAccessAttributes } from '../../authorization/server';
 import { isTheLastMessage } from '../../lib/server/functions/isTheLastMessage';
-import { methodDeprecationLogger } from '../../lib/server/lib/deprecationWarningLogger';
 import { notifyOnRoomChangedById, notifyOnMessageChange } from '../../lib/server/lib/notifyListener';
 import { settings } from '../../settings/server';
 
@@ -66,7 +65,6 @@ Meteor.methods<ServerMethods>({
 	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
 	 */
 	async starMessage(message) {
-		methodDeprecationLogger.method('starMessage', '9.0.0', '/v1/chat.starMessage');
 		const user = (await Meteor.userAsync()) as IUser;
 
 		if (!user) {

@@ -4,7 +4,6 @@ import { Messages, Rooms } from '@rocket.chat/models';
 import { Meteor } from 'meteor/meteor';
 
 import { canAccessRoomAsync } from '../../../authorization/server';
-import { methodDeprecationLogger } from '../../../lib/server/lib/deprecationWarningLogger';
 import { settings } from '../../../settings/server';
 
 const MAX_LIMIT = 100;
@@ -21,7 +20,6 @@ Meteor.methods<ServerMethods>({
 	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
 	 */
 	async getThreadsList({ rid, limit = 50, skip = 0 }) {
-		methodDeprecationLogger.method('getThreadsList', '9.0.0', '/v1/chat.getThreadsList');
 		if (limit > MAX_LIMIT) {
 			throw new Meteor.Error('error-not-allowed', `max limit: ${MAX_LIMIT}`, {
 				method: 'getThreadsList',

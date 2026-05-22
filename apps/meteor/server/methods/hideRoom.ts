@@ -3,7 +3,6 @@ import { Subscriptions } from '@rocket.chat/models';
 import { check } from 'meteor/check';
 import { Meteor } from 'meteor/meteor';
 
-import { methodDeprecationLogger } from '../../app/lib/server/lib/deprecationWarningLogger';
 import { notifyOnSubscriptionChangedByRoomIdAndUserId } from '../../app/lib/server/lib/notifyListener';
 
 declare module '@rocket.chat/ddp-client' {
@@ -36,7 +35,6 @@ Meteor.methods<ServerMethods>({
 	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
 	 */
 	async hideRoom(rid) {
-		methodDeprecationLogger.method('hideRoom', '9.0.0', '/v1/rooms.leave');
 		const uid = Meteor.userId();
 
 		if (!uid) {

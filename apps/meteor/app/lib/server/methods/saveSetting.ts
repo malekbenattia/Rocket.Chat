@@ -9,7 +9,6 @@ import { twoFactorRequired } from '../../../2fa/server/twoFactorRequired';
 import { getSettingPermissionId } from '../../../authorization/lib';
 import { hasPermissionAsync, hasAllPermissionAsync } from '../../../authorization/server/functions/hasPermission';
 import { disableCustomScripts } from '../functions/disableCustomScripts';
-import { methodDeprecationLogger } from '../lib/deprecationWarningLogger';
 import { notifyOnSettingChanged } from '../lib/notifyListener';
 
 declare module '@rocket.chat/ddp-client' {
@@ -24,7 +23,6 @@ Meteor.methods<ServerMethods>({
 	 * @deprecated Scheduled for removal in 9.0.0. No caller found in this repository — kept for external DDP clients only.
 	 */
 	saveSetting: twoFactorRequired(async function (_id: string, value: SettingValue, editor: SettingEditor) {
-		methodDeprecationLogger.method('saveSetting', '9.0.0', '/v1/settings/:_id');
 		const uid = Meteor.userId();
 		if (!uid) {
 			throw new Meteor.Error('error-action-not-allowed', 'Editing settings is not allowed', {
