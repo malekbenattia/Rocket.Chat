@@ -211,6 +211,10 @@ jobs:
         env:
           WEBHOOK_TEST_URL: 'http://httpbin'
           IS_EE: ${{ inputs.release == 'ee' && 'true' || '' }}
+          # API tests intentionally exercise DDP methods through the
+          # `/v1/method.call/:method` proxy. Tell the deprecation logger
+          # not to throw under TEST_MODE for those runs (it still logs).
+          TEST_MODE_API: 'true'
         run: |
           set -o xtrace
 
@@ -227,6 +231,7 @@ jobs:
         env:
           WEBHOOK_TEST_URL: 'http://httpbin'
           IS_EE: ${{ inputs.release == 'ee' && 'true' || '' }}
+          TEST_MODE_API: 'true'
         run: |
           set -o xtrace
 
