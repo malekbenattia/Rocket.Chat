@@ -1,5 +1,10 @@
 <p align="center"> 
-  <img  src="https://github.com/RocketChat/Rocket.Chat.Artwork/raw/master/Logos/2020/png/logo-horizontal-red.png" data-canonical-src="https://github.com/RocketChat/Rocket.Chat.Artwork/raw/master/Logos/2020/png/logo-horizontal-red.png" width="400" />
+  <img
+  src="https://github.com/RocketChat/Rocket.Chat.Artwork/raw/master/Logos/2020/png/logo-horizontal-red.png"
+  data-canonical-src="https://github.com/RocketChat/Rocket.Chat.Artwork/raw/master/Logos/2020/png/logo-horizontal-red.png"
+  width="400"
+  alt="Rocket.Chat logo"
+/>
 </p>
 
 <h1 align="center">
@@ -15,11 +20,12 @@
 
 
 
-[Rocket.Chat](https://rocket.chat) is an open-source, secure, fully customizable communications platform developed in TypeScript for organizations with high standards of data protection.
+[Rocket.Chat](https://rocket.chat) is an open-source, secure, and fully customizable communications platform developed in TypeScript for organizations with high standards of data protection.
 
-We are the ultimate solution for team communications, enabling real-time conversations between colleagues, with other companies, and with your customers or citizens, regardless of how they connect with you. The result is an increase in productivity and user satisfaction rates.
+Rocket.Chat enables real-time communication between teams, businesses, customers, and communities across multiple channels and devices. The platform is designed to improve collaboration, productivity, and user satisfaction while maintaining privacy and security.
 
-Every day, tens of millions of users in over 150 countries and in organizations such as Deutsche Bahn, The US Navy, and Credit Suisse trust Rocket.Chat to keep their communications completely private and secure.
+Trusted by tens of millions of users across more than 150 countries, Rocket.Chat is used by organizations such as Deutsche Bahn, the U.S. Navy, and Credit Suisse to keep communications secure and private.
+
 
 # 🚀 Platform overview
 
@@ -37,9 +43,13 @@ Rocket.Chat provides endless possibilities. Here’s an overview of the features
 
 # 💻 Deploy Rocket.Chat
 
-We support different methods of deployment for different needs. Choose your method:
+Rocket.Chat supports multiple deployment methods to fit different infrastructure needs.
 
-- Are you deploying Rocket.Chat on your own servers? You can deploy using one of the recommended methods: Docker, Podman, or Kubernetes. Refer to the [Deployment Guide](https://docs.rocket.chat/docs/deploy-rocketchat) for details. Before you deploy, make sure to check the [system requirements](https://docs.rocket.chat/docs/system-requirements) to deploy a workspace successfully. Alternatively, deploy Rocket.Chat using [Launchpad](https://docs.rocket.chat/docs/deploy-with-launchpad) for a quick and straightforward Kubernetes setup where you don't have to manage each dependency.
+- **Self-hosted deployment:** Deploy Rocket.Chat on your own servers using recommended methods such as Docker, Podman, or Kubernetes. See the [Deployment Guide](https://docs.rocket.chat/docs/deploy-rocketchat) for setup instructions.
+
+- Before deploying, review the [system requirements](https://docs.rocket.chat/docs/system-requirements) to ensure your environment is properly configured.
+
+- For a faster and simpler Kubernetes setup, you can use [Launchpad](https://docs.rocket.chat/docs/deploy-with-launchpad), which helps automate dependency management and deployment steps.
 
 - Do you need to run the workspace on an isolated network? Set up an [air-gapped workspace](https://docs.rocket.chat/docs/rocketchat-air-gapped-deployment) to use Rocket.Chat without internet access, suitable for high-security or regulated environments.
 
